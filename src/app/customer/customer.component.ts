@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class CustomerComponent implements OnInit {
 
-  books: any;
+  customers: any;
 
   constructor(private api: ApiService) { }
 
@@ -17,7 +17,7 @@ export class CustomerComponent implements OnInit {
     this.api.getCustomers()
       .subscribe(res => {
         console.log(res);
-        this.books = res;
+        this.customers = res;
       }, err => {
         console.log(err);
       });

@@ -1,22 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { CustomerAddComponent } from './customer-add/customer-add.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent
+    CustomerComponent,
+    CustomerDetailComponent,
+    CustomerAddComponent,
+    CustomerEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

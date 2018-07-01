@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { CustomerAddComponent } from './customer-add/customer-add.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -10,21 +13,21 @@ const appRoutes: Routes = [
     component: CustomerComponent,
     data: { title: 'Customers List' }
   },
-  // {
-  //   path: 'book-details/:id',
-  //   component: BookDetailComponent,
-  //   data: { title: 'Book Details' }
-  // },
-  // {
-  //   path: 'book-create',
-  //   component: BookCreateComponent,
-  //   data: { title: 'Create Book' }
-  // },
-  // {
-  //   path: 'book-edit/:id',
-  //   component: BookEditComponent,
-  //   data: { title: 'Edit Book' }
-  // },
+  {
+    path: 'customer-details/:id',
+    component: CustomerDetailComponent,
+    data: { title: 'Customer Details' }
+  },
+  {
+    path: 'customer-add',
+    component: CustomerAddComponent,
+    data: { title: 'Add Customer' }
+  },
+  {
+    path: 'customet-edit/:id',
+    component: CustomerEditComponent,
+    data: { title: 'Edit Book' }
+  },
   { path: '',
     redirectTo: '/customers',
     pathMatch: 'full'
@@ -34,7 +37,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
   ],
   exports: [
     RouterModule
