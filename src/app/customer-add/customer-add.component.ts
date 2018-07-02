@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { ApiService } from '../api.service';
 
@@ -27,7 +27,7 @@ export class CustomerAddComponent implements OnInit {
     });
   }
 
-  // convenience getter for easy access to form fields
+  // getter for form fields
   get f() { return this.customerForm.controls; }
 
   onSubmit() {
@@ -48,7 +48,7 @@ export class CustomerAddComponent implements OnInit {
     console.log(customer);
 
     this.api.postCustomer(customer)
-    .subscribe(res => {
+      .subscribe(res => {
         let id = res['_id'];
         this.router.navigate(['/customer-details', id]);
       }, (err) => {
@@ -57,6 +57,7 @@ export class CustomerAddComponent implements OnInit {
   }
  
   onReset() {
+    this.submitted = false;
     this.customerForm.reset();
   }
 

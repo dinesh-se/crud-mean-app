@@ -27,8 +27,11 @@
       </div>
       <div class="form-group">
         <label class="control-label">Birthday</label>
-        <input type="text" class="form-control" formControlName="birthday" 
-          [ngClass]="{ 'is-invalid': submitted && f.birthday.errors }">
+        <input type="text"
+          formControlName="birthday"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.birthday.errors }"
+          bsDatepicker>
         <div *ngIf="submitted && f.birthday.errors" class="invalid-feedback">
             <div *ngIf="f.birthday.errors.required">Birthday is required</div>
         </div>
@@ -43,7 +46,7 @@
       </div>
       <div class="form-group">
         <label class="control-label">Customer life time</label>
-        <input type="text" class="form-control" formControlName="customerLifetimeValue" 
+        <input type="number" class="form-control" formControlName="customerLifetimeValue" 
           [ngClass]="{ 'is-invalid': submitted && f.customerLifetimeValue.errors }">
         <div *ngIf="submitted && f.customerLifetimeValue.errors" class="invalid-feedback">
             <div *ngIf="f.customerLifetimeValue.errors.required">Life time value is required</div>
