@@ -16,19 +16,19 @@ curl -i -X POST -H "Content-Type: application/json" -d '[{"customerID":1,"name":
 
 Completed items:
 
-[x] Angular framework used
-[x] Unit tests with Jasmine
-[x] Support in evergreen browsers
-[x] Provide documentation
-[x] RWD with Bootstrap 4.0
-[x] Github, Git
-[x] Build process -> ng build from angular cli.
-[x] Used TypeScript
-[x] Node server
-[x] Mongo DB for persistent storage
-[] Application hosting in Heroku
-[] CI/CD with Jenkins and Travis
-[] E2E protractor tests
+- [x] Angular framework used
+- [x] Unit tests with Jasmine
+- [x] Support in evergreen browsers
+- [x] Provide documentation
+- [x] RWD with Bootstrap 4.0
+- [x] Github, Git
+- [x] Build process -> ng build from angular cli.
+- [x] Used TypeScript
+- [x] Node server
+- [x] Mongo DB for persistent storage
+- [ ] Application hosting in Heroku
+- [ ] CI/CD with Jenkins and Travis
+- [ ] E2E protractor tests
 
 
 ## Running unit tests
